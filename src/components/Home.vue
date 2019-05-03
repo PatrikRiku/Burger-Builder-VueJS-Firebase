@@ -1,0 +1,108 @@
+<template>
+  <div class="home">
+    <h1>Burger Town</h1>
+    <p>{{ welcome }}</p>
+    <img class="wiggle-img" src="../assets/Hamburger_01.svg" />
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'home',
+    data() {
+      return {
+        welcome: 'Quality burgers'
+      }
+    }
+  }
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  img {
+    width: auto;
+  }
+
+  @media only screen and (max-width: 600px) {
+    img {
+      width: 100%;
+    }
+  }
+
+  .wiggle-img:hover {
+    -webkit-animation-name: wiggle;
+    -ms-animation-name: wiggle;
+    -ms-animation-duration: 1000ms;
+    -webkit-animation-duration: 1000ms;
+    -webkit-animation-iteration-count: 1;
+    -ms-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    -ms-animation-timing-function: ease-in-out;
+  }
+
+  @-webkit-keyframes wiggle {
+    0% {
+      -webkit-transform: rotate(10deg);
+    }
+
+    25% {
+      -webkit-transform: rotate(-10deg);
+    }
+
+    50% {
+      -webkit-transform: rotate(20deg);
+    }
+
+    75% {
+      -webkit-transform: rotate(-5deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(0deg);
+    }
+  }
+
+  @-ms-keyframes wiggle {
+    0% {
+      -ms-transform: rotate(1deg);
+    }
+
+    25% {
+      -ms-transform: rotate(-1deg);
+    }
+
+    50% {
+      -ms-transform: rotate(1.5deg);
+    }
+
+    75% {
+      -ms-transform: rotate(-5deg);
+    }
+
+    100% {
+      -ms-transform: rotate(0deg);
+    }
+  }
+
+  @keyframes wiggle {
+    0% {
+      transform: rotate(10deg);
+    }
+
+    25% {
+      transform: rotate(-10deg);
+    }
+
+    50% {
+      transform: rotate(20deg);
+    }
+
+    75% {
+      transform: rotate(-5deg);
+    }
+
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+</style>
