@@ -1,4 +1,8 @@
-# burgertown
+# burgertown burger builder
+
+A VueJS app where you can build burgers and store them in Firebase.
+
+You have to add your own Firebase connection in firebaseConfig.js. Then the web app should work correctly.
 
 ## Project setup
 ```
